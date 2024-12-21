@@ -19,7 +19,7 @@ my_dataframe = session.table("smoothies.public.fruit_options").select(col('SEARC
 #st.dataframe(data=my_dataframe, use_container_width=True)
 #st.stop()
 
-pd_df= my_dataframe.to_pandas()
+pd_df = my_dataframe.to_pandas()
 st.dataframe(pd_df)
 st.stop()
 
@@ -48,8 +48,8 @@ if ingredients_list:
 
     my_insert_stmt = """ insert into smoothies.public.orders(ingredients,name_on_order)
             values ('""" + ingredients_string + """','""" + name_on_order + """')"""
-    st.write(my_insert_stmt)
-    # st.stop()
+    #st.write(my_insert_stmt)
+    #st.stop()
 
     #st.write(my_insert_stmt)
     time_to_insert=st.button('Submit Order')
